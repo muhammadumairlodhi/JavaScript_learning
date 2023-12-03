@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Constructors</title>
-</head>
-
-<body>
-    <script>
 
          class blankform {
              constructor(givenname, trainno) {
@@ -68,7 +58,4 @@
 
          
  
-    </script>
-</body>
-
-</html>
+  

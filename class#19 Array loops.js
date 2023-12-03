@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Arrary Lopps</title>
-  </head>
-  <body>
-    <script type="text/javascript">
+
       //for loops
       let numbers=[1, 2, 3, 4, 5, 6]
      for (var i = 0; i < numbers.length; i++) {
@@ -32,6 +25,4 @@ for (let i in object) {
    console.log(i);
 }
 
-    </script>
-  </body>
-</html>
+ 

@@ -1,11 +1,4 @@
- <!DOCTYPE html>
- <html lang="en" dir="ltr">
-   <head>
-     <meta charset="utf-8">
-     <title>super/over write </title>
-   </head>
-   <body>
-     <script type="text/javascript">
+ 
        class employee {
          constructor(name, password,leave) {
            this.name=name
@@ -34,6 +27,4 @@
        let umair = new programmer("umair")
        umair.requestedtea()
        ali.getleave()
-     </script>
-   </body>
- </html>
+  

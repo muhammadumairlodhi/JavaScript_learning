@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>console method</title>
-  </head>
-  <body>
-<script type="text/javascript">
+
+  
   console.clear()//clear in console
 console.log("I am boy.");//log
 console.error("An error is occurred!");//error
@@ -60,6 +54,3 @@ console.timeStamp('Marker');
 
 console.memory();
 
- </script>
-</body>
-</html>

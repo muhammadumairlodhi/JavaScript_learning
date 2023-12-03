@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>practice set</title>
-  </head>
-  <body>
-  <script type="text/javascript">
+
 
 let runAgain = true;
 
@@ -35,6 +28,4 @@ if (number > 4) {
 }
 let color = prompt("Enter a color")
 document.body.style.background =  color
-    </script>
-  </body>
-</html>
+ 

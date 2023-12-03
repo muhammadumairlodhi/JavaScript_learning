@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inheritance & extends Keyword</title>
-</head>
-
-<body>
-    <script>
      class animals{
         constructor(name, color){
           this.name=name
@@ -37,7 +27,4 @@
      animal.runing()
        m.  barking()
        g. barking()
-    </script>
-</body>
-
-</html>
+ 

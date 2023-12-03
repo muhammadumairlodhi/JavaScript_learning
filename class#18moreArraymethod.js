@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Array method</title>
-  </head>
-  <body>
-    <script type="text/javascript">
+
       //delete method
       let numbers=[1, 2, 3, 4, 5]
       console.log(numbers);//output:1, 2, 3, 4, 5
@@ -25,6 +18,3 @@
       nums.sort(compare)
       console.log(nums);
 
-    </script>
-  </body>
-</html>

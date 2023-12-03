@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>class object</title>
-    
-</head>
-
-<body>
-  
-   
-
-    <script>
         class blankform {
             submit() {
                 alert( this.name+" your form has been submitted sussesfully with train no."+ this.umair );
@@ -38,7 +24,4 @@
         aliform.submit()
         hamzaform.cancel()
 aliform.inprosess()
-    </script>
-</body>
-
-</html>
+  

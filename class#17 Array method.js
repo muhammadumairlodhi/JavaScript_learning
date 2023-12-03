@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Array method</title>
-  </head>
-  <body>
-    <script type="text/javascript">
+
       //push()
       //Description: Adds one or more elements to the end of an array.
       let numbers = [1, 2, 3];
@@ -75,7 +68,3 @@ let sum = numbers11.reduce(function(accumulator, currentValue) {
 });
 console.log(sum);  // Output: 15
 
-
-    </script>
-  </body>
-</html>

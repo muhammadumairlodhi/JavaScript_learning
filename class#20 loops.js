@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <title>Array loops</title>
-</head>
-
-<body>
-  <script type="text/javascript">
     //map
 
     let numbers = [1, 2, 3, 4, 5]
@@ -33,7 +24,3 @@
       return u1 + u2// we can do " * / - "
     })
     console.log(c);
-  </script>
-</body>
-
-</html>

@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>alert prompt confirm</title>
-  </head>
-  <body>
-    <script type="text/javascript">
+
       alert("Enter the value of a")
       let a = prompt("Enter here")
       a= Number.parseInt(a)
@@ -17,6 +10,4 @@
    else {
      document.write("please allow me to write")
    }
-    </script>
-  </body>
-</html>
+   
