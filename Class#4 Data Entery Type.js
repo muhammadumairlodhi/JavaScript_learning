@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>data type in JS</title>
-</head>
-<p id="demo"></p>
-
-<body>
-    <h1>DATA ENTEY TYPES</h1>
-    <h3>1. primitivs</h3>
-    <h3>2.non-primitivs/objects</h3>
-    <P>Note: In Console</P>
-
-    <script>
         //1.primitivs
         //2.objects
 
@@ -50,7 +34,4 @@
                 console.log(item["umair"])
 
         
-    </script>
-</body>
-
-</html>
+ 

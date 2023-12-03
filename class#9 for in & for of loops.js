@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>for in & for of loops</title>
-  </head>
-  <body>
-    <script>
+
+   
         //For in loops
         let obj={
          harry:90,
@@ -28,6 +22,4 @@ let objc={
    for( let d of "umair"){
      console.log(d)
      }
-    </script>
-  </body>
-</html>
+  

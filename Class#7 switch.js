@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>switch JS</title>
-</head>
-<body>
 
-  <p id="demo"></p>
-    <script>
+
+  
    let day;
 switch (new Date().getDay()) {
   case 0:
@@ -34,8 +26,8 @@ switch (new Date().getDay()) {
 }
     console.log(day)
     document.getElementById("demo").innerHTML="today is "+day;
-     </script>
- <script>
+     
+
 let furit="orange";
 
 switch (furit) {
@@ -54,7 +46,4 @@ switch (furit) {
   console.log(Error );
 
 }
- </script>
-
-</body>
-</html>
+ 

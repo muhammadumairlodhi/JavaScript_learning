@@ -1,12 +1,5 @@
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title> For loops</title>
-  </head>
-  <body>
-   <script type="text/javascript">
+
      for (var i = 0; i <  5; i++) {
         console.log(i);
      }
@@ -19,6 +12,4 @@
      }
      console.log("sum of first "+ n +" natural Number is "+ sum );
 
-    </script>
-  </body>
-</html>
+    
