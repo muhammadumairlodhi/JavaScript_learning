@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>strings</title>
-  </head>
-  <body>
-    <script type="text/javascript">
+
       //we can use single or double qoute
       let name="umair"
       console.log(name);
@@ -28,6 +21,4 @@
        let line='there is new\nline'
        console.log(line);
 
-    </script>
-  </body>
-</html>
+  

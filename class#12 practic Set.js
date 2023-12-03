@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Practice Set</title>
-  </head>
-  <body>
-    <script type="text/javascript">
+
       //Question #1
       let marks={
         umair:90,
@@ -40,6 +33,4 @@ const mean=(a, b, c, d, )=>{
   return (a +b+c+d)/4
 }
 console.log(mean(4,5,6,7))
-    </script>
-  </body>
-</html>
+  

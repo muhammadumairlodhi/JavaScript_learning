@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>While loops/ do-while loops</title>
-  </head>
-  <body>
-    <h1>While loops && do-while loops</h1>
-    <script type="text/javascript">
+
       let n=prompt("enter your a number")
       n=Number.parseInt(n)
       let i=0;
@@ -24,6 +16,4 @@
         s++;
 
       }while(s<a)
-    </script>
-  </body>
-</html>
+    

@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Function</title>
-  </head>
-  <body>
-    <h1>Functions</h1>
-    <script type="text/javascript">
+
 function myfunction(x,y) {
   return 1+(x+y)/2
 }
@@ -17,22 +9,20 @@ console.log("one plus avrage of a and b is",myfunction(a,b))
 console.log("one plus avrage of a and c is", myfunction(a,c))
 console.log("one plus avrage of b and c is",  myfunction(b,c))
 
-    </script>
-    <script type="text/javascript">
+    
+    
       let x= myfunction(3,4);
       console.log("The multiple of 4 and 3 is",x);
     function myfunction(a,b){
       return a*b;
     }
 
-    </script>
-    <script type="text/javascript">
+   
       const sum = (g, h)=>{
         return g + h
       }
       console.log(sum(8,3));
-    </script>
-    <script type="text/javascript">
+    
       const hello = ()=>{
         console.log("How are you. I am fine")
         return "hi"
@@ -40,6 +30,4 @@ console.log("one plus avrage of b and c is",  myfunction(b,c))
       let v = hello()
       console.log(v);
 
-    </script>
-  </body>
-</html>
+ 

@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>String method</title>
-  </head>
-  <body>
-    <script type="text/javascript">
+
       let name ='Umair'
       console.log(name.length);
       console.log(name.toUpperCase())
@@ -45,7 +38,3 @@ console.log(name1.startsWith("Ali")); // Output: false
 
 console.log(name1.endsWith("Umair")); // Output: true
 console.log(name1.endsWith("Ali")); // Output: false
-
-    </script>
-  </body>
-</html>
