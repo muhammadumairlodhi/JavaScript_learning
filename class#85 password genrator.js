@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password genrators</title>
-</head>
-<body>
-    <script>
+
     class PasswordGenerator {
   constructor() {
     this.lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
@@ -79,6 +71,4 @@ if (password) {
   console.log("Generated Password:", password);
 }
 
-    </script>
-</body>
-</html>
+  

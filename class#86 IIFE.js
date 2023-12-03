@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IIFE</title>
-</head>
-
-<body>
-  <script>
     let a = () => {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -33,8 +23,3 @@
     //console.log(b);
 
      //A async function will write  in a bracket and then call the bracket
-
-  </script>
-</body>
-
-</html>

@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destructuring and spread operator</title>
-</head>
-<body>
-    <script>
+
      let arr = [1, 2, 3, 4, 5, 6, 7]
         //let [a, b] = arr
         //console.log(a,b);
@@ -44,6 +36,4 @@ const dateFields = [1970, 0, 1]; // 1 Jan 1970
 const d = new Date(...dateFields);
 console.log(d)
 
-    </script>
-</body>
-</html>
+   

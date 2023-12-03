@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>closures</title>
-</head>
-
-<body>
-    <script>
         /*Message = "good morning from Umair"
         function hello() {
             Message = "hi, every body in the hall"
@@ -50,7 +40,4 @@ function myfun() {
 let e = myfun()
 e()
     
-    </script>
-</body>
-
-</html>
+  

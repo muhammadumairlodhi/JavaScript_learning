@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> intro to Promises</title>
-</head>
-
-<body>
-    <script>
         let Promises = new Promise((resolve, reject) => {
             alert("hi, there")
             resolve(546);
@@ -23,7 +13,4 @@
         console.log(Promises);
 
 
-    </script>
-</body>
-
-</html>
+   
