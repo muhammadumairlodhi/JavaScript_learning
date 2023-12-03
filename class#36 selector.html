@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Selector</title>
+</head>
+
+<body>
+
+  <ul class="list-group">
+    <li class="list-group-item"><span id="span">An item</span></li>
+    <li class="list-group-item" id="li1">A second item</li>
+    <li class="list-group-item" id="li2">A third item</li>
+    <li class="list-group-item" id="li3">A fourth item</li>
+    <li class="list-group-item umair " id="li4">And a fifth one</li>
+  </ul>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script>
+    const a = document.getElementById("span")
+    a.style.color = "white"
+
+
+    const b = document.getElementById("li1")
+    b.style.background = "blue"
+    b.style.color = "red"
+
+
+    const c = document.getElementsByClassName("list-group-item")[0]
+    c.style.background = "black"
+
+
+    const d = document.querySelectorAll(".list-group-item")
+    d[2].style.background = "purple"
+    d[3].style.color = "yellow"
+    d[3].style.background = "green"
+
+    document.querySelector(".umair").style.color="orange"
+    //document.querySelector(".umair").style.background="red"
+  
+  
+  </script>
+
+
+
+</body>
+
+</html>

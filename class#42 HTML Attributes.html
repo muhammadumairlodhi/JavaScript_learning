@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Method</title>
+</head>
+<div id="hi" class="hire">Hi, how are you</div>
+<!--  usingdata-*  -->
+<div id="gum" data-game="token" data-player="Umair">Hi there I am using OBS</div>
+<body>
+    <script>
+    let hi = document.getElementById("hi")
+        //getAttribute
+        let a = hi.getAttribute("class")
+        console.log(a)
+        //hasAttribute
+        console.log(hi.hasAttribute("class"));
+        console.log(hi.hasAttribute("style"));
+        console.log(hi.hasAttribute("id"));
+        //set Attribute
+       //hi.setAttribute("hidden","true")
+       hi.setAttribute("class","umair")
+       //remove Attribute
+       hi.removeAttribute("class","umair")
+       //for shown all attribute
+       console.log(hi.attributes)
+       //data-*
+       let gum = getElementbyId("gum")
+   console.log(gum.dataset)
+   console.log(gum.dataset.game)
+   console.log(gum.dataset.player)
+
+
+    </script>
+
+</body>
+
+</html>

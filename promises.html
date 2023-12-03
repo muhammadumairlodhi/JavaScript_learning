@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> intro to Promises</title>
+</head>
+
+<body>
+    <script>
+        let Promises = new Promise((resolve, reject) => {
+            alert("hi, there")
+            resolve(546);
+            reject(67);
+        })
+
+        console.log("hello world1!");
+        setTimeout(() => {
+            console.log("hello world 2 after 2 second");
+        }, 2000);
+        console.log("hello world 3");
+        console.log(Promises);
+
+
+    </script>
+</body>
+
+</html>

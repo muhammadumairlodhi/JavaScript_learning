@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Array protoptpe __proto</title>
+</head>
+
+<body>
+    <script>
+        let a = {
+            name: "umair",
+            lan: "JavaScript",
+            run: () => {
+                alert("self run")
+            }
+        }
+        console.log(a);
+        let p = {
+            run: () => {
+                alert("run")
+            }
+        }
+        p.__proto__ = {
+            name2: "Ali",
+            lan2: "HTML",
+        }
+        a.__proto__ = p
+        a.run()
+        console.log(a.name2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add event lisner//remove event lisner</title>
+</head>
+
+<body>
+    <div>
+        <button id="btn">Click me</button>
+    </div>
+    <script>
+
+        //addEventListener
+
+        /*btn.addEventListener('click',function (e) {
+            alert("hello world!")
+        })
+
+        btn.addEventListener('click',function(e) {
+            alert('hello world2')
+        })*/
+
+        //removeEventListener
+
+        let x = function(e) {
+            alert("hello world x")
+         }
+         let y = function(e) {
+            alert("hello world y")
+        }
+         //btn.addEventListener("click", x)
+         btn.addEventListener("click", y)
+
+        let z = prompt("choose your favrite number(x/y)")
+         if (z == "x") {
+            btn.removeEventListener("click", y)
+         }  
+         if (z == "y") {
+            btn.removeEventListener("click", x)
+         }
+
+
+         //different function
+
+
+         let a = function(e) {
+            alert("hello world a")
+            console.log(e);
+            console.log(e.target);
+            console.log(e.type);
+            console.log(e.currentTarget);
+            console.log(e.clientX,e.clientY );
+         }
+            btn.addEventListener("click", a)
+         
+         
+    </script>
+</body>
+
+</html>

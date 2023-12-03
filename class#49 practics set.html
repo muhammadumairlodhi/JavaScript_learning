@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practics set </title>
+    <style>
+        .bulb{
+            background-color: yellow;
+        }
+        .bulbcontainer{
+            width: 150px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--question 1-->
+    <!-- <button id="btn1">click me</button>
+    <button id="btn2">click me</button>
+    <button id="btn3">click me</button>
+    <button id="btn4">click me</button>
+
+    question no 2
+
+    <h1>Booksmarks Websites</h1>
+    <a href=" https://www.google.com/"><button id="google">google</button></a>
+    <a href=" https://www.facebook.com/"> <button id="fb">facebook</button></a>
+    <a href=" https://www.youtube.com/"> <button id="yt">youtube</button></a>
+
+    question no 3
+
+    <h1>Booksmarks Websites</h1>
+    <button id="google">google</button>
+    <button id="fb">facebook</button>
+    <button id="yt">youtube</button>-->
+
+    <div id="bulb" class="bulb bulbcontainer"></div>
+    <script>
+
+
+        //question no 1
+        /* let x = function (e) {
+             alert("you clicked on button 1 ")
+         }
+         btn1.addEventListener("click", x)
+ 
+         btn2.addEventListener("click", function (u) {
+             alert("you clicked on button 2")
+         })
+ 
+         let y = function (e) {
+             alert("you clicked on button 3 ")
+         }
+         btn3.addEventListener("click", y)
+ 
+         btn4.addEventListener("click", function (u) {
+             alert("you clicked on button 4")
+         })
+ 
+ 
+         //question 3
+         document.getElementById("google").addEventListener("click", function () {
+             window.location = "https://www.google.com/";
+             win.focus()
+         })
+         document.getElementById("fb").addEventListener("click", function () {
+             window.location = "https://www.facebook.com/";
+             win.focus()
+         }) 
+         document.getElementById("yt").addEventListener("click", function () {
+             window.location = "https://www.youtube.com/";
+             win.focus()
+         })*/
+
+setInterval(async  function() {
+    document.querySelector("#bulb").classList.toggle("bulb")
+},500)
+        
+
+
+    </script>
+</body>
+
+</html>

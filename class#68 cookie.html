@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+
+<body>
+     <script> 
+     console.log(document.cookie)
+document.cookie = "name2=harry11"
+document.cookie = "name=harry"
+let a = prompt("Enter your name")
+let p =prompt("Enter your value")
+document.cookie = `${encodeURIComponent(a)}=${encodeURIComponent(p)}`
+console.log(document.cookie)
+
+
+//decodeURIComponent("")
+ //use for decoding URL Compunemt
+ </script>
+</body>
+
+</html>

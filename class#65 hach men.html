@@ -1,0 +1,50 @@
+
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Hacker Page</title>
+  <style>
+    body {
+      background-color: black;
+      color: green;
+      font-family: monospace;
+      text-align: center;
+      font-size: 30px;
+      padding-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div id="message"></div>
+
+  <script>
+    const messages = [
+  "Connecting to Instagram...",
+  "Establishing secure connection...",
+  "Accessing user data...",
+  "Decrypting passwords...",
+  "Hacking complete! Access granted."
+];
+
+const messageElement = document.getElementById("message");
+
+function displayMessage(index) {
+  if (index >= messages.length) {
+    return; // Stop displaying messages if all messages have been shown
+  }
+
+  const message = messages[index];
+  messageElement.textContent = message;
+
+  setTimeout(() => {
+    displayMessage(index + 1); // Move to the next message after a delay
+  }, 3000); // Display each message for 2 seconds
+}
+
+displayMessage(0); // Start displaying messages from the beginning
+
+  </script>
+</body>
+</html>
+
+ 

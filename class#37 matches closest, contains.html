@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>JavaScript Matches, Closest, Contains Example</title>
+</head>
+<body>
+  <div id="id1" class="box">This is Id 1<span id="sp1">No body go to there</span></div>
+  <div id="id2" class="box">This is Id 2</div>
+
+  <script>
+//Using Matches
+let a = document.getElementById("id1")
+console.log(a);
+console.log(a.matches(".class"));
+console.log(a.matches(".id1"));
+console.log(a.matches("#id1"));
+
+//Using Matches
+let b = "The Brown Fox jumped over a lazy dog"
+console.log(b);
+const c = " Brown Fox";
+const d = b.match(c);
+if (d) {
+  console.log("true")
+} else {
+  console.log("false");
+}
+
+
+//closest
+let e = document.getElementById("id2")
+let f = document.getElementById("sp1")
+console.log(f.closest("#id1"));
+
+// Contains
+console.log(id1.contains(sp1));
+console.log(e.contains(sp1));
+console.log(a.contains(sp1));
+console.log(f.contains(sp1));
+
+  </script>
+</body>
+</html>

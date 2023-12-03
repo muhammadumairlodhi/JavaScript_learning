@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await </title>
+</head>
+
+<body>
+    <script>
+        async function weather() {
+            let BhalwalWeather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("34 deg")
+                }, 1000);
+            })
+            let SargodhaWeather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("38 deg")
+                }, 2000);
+            })
+            //   BhalwalWeather.then(alert)
+            // SargodhaWeather.then(alert)
+            console.log("fetching Bhalwal weather please wait....");
+            let Bhalw = await BhalwalWeather
+            console.log("fetshed Bhalwal weather is "+Bhalw);
+            console.log("fetching sargoda weather please wait....");
+            let sarw = await SargodhaWeather
+            console.log("fetched Sargodha weather is "+sarw);
+            return[Bhalw, sarw]
+        }
+        let cherry = async()=>{
+            console.log("hi, I am cherry and I am witting");
+        }
+      
+       // let a = weather()
+      // console.log(a);
+        //a.then((value)=>{
+         //   console.log(value);
+       // })
+        // cherry()
+        let hi = async ()=>{
+            console.log("wellcome to weather control room");
+            let a = await weather()
+            let b = await cherry()
+        }
+        hi()
+    </script>
+</body>
+
+</html>

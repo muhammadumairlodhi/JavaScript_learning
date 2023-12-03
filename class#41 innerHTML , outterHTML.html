@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello world! 
+    <span id="sp1" hidden >Hi,  I am a span</span>
+    <script>
+        //dir
+        let x = document.getElementsByTagName("span")[0]
+        console.log(x)
+        let y = document.getElementsByTagName("span")[0]
+        console.dir(y)
+
+        //node name
+console.log(document.body.firstChild.nodeName)
+console.log(document.body.firstElementChild.nodeName)
+console.log(document.body.firstChild)
+ 
+// inner HTML
+console.log (sp1.innerHTML)
+
+//outer HTML
+console.log(sp1.outerHTML)
+
+//data .nodevalue
+console.log(document.body.firstChild.nodeValue)
+console.log(document.body.firstChild.data)
+
+
+//textContent
+//console.log(document.body.textContent)
+
+
+// hidden
+console.log(sp1.hidden=false)
+
+    </script>
+</body>
+</html>

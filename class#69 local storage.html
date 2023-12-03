@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage</title>
+ </head>
+ <body>
+    <script>
+ let key = prompt("Enter your  key you want to set")
+ let value = prompt("Enter your value you want to set")
+localStorage.setItem(key, value)
+ console.log(`the value at ${key} is ${localStorage.getItem(key)}`);
+  if (key == 0) {
+    localStorage.clear()
+  }
+  
+      //  sessionStorage.setItem("name","umair")
+      //  sessionStorage.getItem("name","umair")
+      //  sessionStorage.clear()
+       // sessionStorage.length 
+       // sessionStorage.removeItem() 
+       // sessionStorage. key(index)
+    </script>
+ </body>
+ </html>

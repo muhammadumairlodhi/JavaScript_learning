@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML insertion method</title>
+</head>
+<body>
+    <div class="contaniner">
+        it is start of this container(inner HTML)
+        <div class="first">hello, world</div>
+        IT IS THE END OF THIS container(innerHTML)
+    </div>
+   <script>
+        let a = document.getElementsByTagName("div")[0]
+        //  a.innerHTML = a.innerHTML + '<h1>This is h1 heading</h1>';   //adding new document in inner HTML
+
+        let b = document.createElement("div")
+        b.innerHTML = '<h1>Hello, Muslim World!</h>'
+        a.appendChild(b)                 // come at the end of container
+        //a.append (b)                   // come at the end of container
+        //a.prepend(b)                   // come in start of container
+        //a.before(b)                    // come before the container div
+        //a.after(b)                     //come after the container div
+        //a.replaceWith(b)               //replace all element with new element
+    </script>
+</body>
+
+</html>

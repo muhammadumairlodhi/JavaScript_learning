@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calling the promises</title>
+</head>
+
+<body>
+    <script>
+        //chaning multiple promises
+
+        let p1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("hi, your order is being packed")
+
+            }, 2000);
+        })
+        p1.then((value) => {
+            console.log(value);
+            console.log(1050);
+            let p2 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve()
+                }, 2000);
+            })
+            return p2
+        }).then((value) => {
+            console.log("we have done");
+            p3 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve()
+                }, 2000);
+            })
+            return p3
+        }).then((value) => {
+            console.log("your order is pakka done");
+            let p4 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve()
+                }, 2000);
+
+            })
+            return p4
+        }).then((value) => {
+            console.log("hi");
+            let p5 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve()
+                }, 2000);
+            })
+            return p5
+        }).then((value) => {
+            console.log("hi, there");
+        })
+
+
+        //simple promises
+        let mypromises = new Promise((resolve, reject) => {
+            resolve(10)
+        })
+        mypromises.then((result) => {
+            console.log(result);
+            return result * 2
+        }).then((result2) => {
+            console.log(result2);
+            return result2 + 36
+        }).then((result3) => {
+            console.log(result3);
+        })
+
+        //returning new promises
+        let newpromise = new Promise((resolve, reject) => {
+            resolve(10)
+        })
+newpromise.then((value)=>{
+    console.log(value);
+    return new Promise((resolve, reject) => {
+        resolve(value*5)
+    })
+}).then((p)=>{
+    console.log(p);
+    return new Promise((resolve, reject) => {
+        resolve(p+70)
+    })
+}).then((p2)=>{
+    console.log(p2);
+})
+    </script>
+</body>
+
+</html>

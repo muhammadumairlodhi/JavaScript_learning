@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Random Joke Website</title>
+ <style>
+   .container {
+     text-align: center;
+     padding: 20px;
+   }
+ </style>
+</head>
+<body>
+ <div class="container">
+   <h1>Random Joke Website</h1>
+   <button id="btnGetJoke">Get Joke</button>
+   <p id="jokeText"></p>
+ </div>
+
+ <script>
+   const btnGetJoke = document.getElementById('btnGetJoke');
+   const jokeText = document.getElementById('jokeText');
+
+   const jokes = [
+     "Why don't scientists trust atoms? Because they make up everything!",
+     "What do you call a fish with no eyes? Fsh!",
+     "I used to be a baker, but I couldn't make enough dough.",
+     "Why did the scarecrow win an award? Because he was outstanding in his field!",
+     // Add more jokes here...
+   ];
+
+   // Event listener for the button click
+   btnGetJoke.addEventListener('click', displayRandomJoke);
+
+   // Function to display a random joke
+   function displayRandomJoke() {
+     const randomIndex = Math.floor(Math.random() * jokes.length);
+     jokeText.textContent = jokes[randomIndex];
+   }
+ </script>
+</body>
+</html>

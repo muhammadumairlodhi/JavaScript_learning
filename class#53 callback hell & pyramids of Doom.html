@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>paramids of Dooms && callback hell  </title>
+ </head>
+ <body>
+  <script>
+    //callback problem
+  asyncOperation1(function(result1) {
+    asyncOperation2(result1, function(result2) {
+      asyncOperation3(result2, function(result3) {
+        // More nested callbacks...
+        // ...
+      });
+    });
+  });
+
+  //paramids of dooms
+
+  asyncOperation1(function(result1) {
+  asyncOperation2(function(result2) {
+    asyncOperation3(function(result3) {
+      asyncOperation4(function(result4) {
+        // More nested callbacks...
+        // ...
+      });
+    });
+  });
+});
+
+</script>
+ </body>
+ </html>

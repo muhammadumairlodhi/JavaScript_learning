@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>handle the promises</title>
+</head>
+
+<body>
+    <script>
+        let p = new Promise((resolve, reject) => {
+           setTimeout(() => {
+            resolve()
+           }, 2000);
+          
+        })
+        p.then((value)=>{
+            console.log("hi, there I am using whatsapp");
+        })
+        p.then((value)=>{
+        console.log("hi, there I am so good");
+        })
+        p.then(()=>{
+            console.log("hi,I say that you are good")
+        })
+        //get so on handle the promises
+
+        //not confusion with calling promises
+
+        //let also see it
+
+        let pp = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(10)
+            }, 2000);
+        })
+        pp.then((value) => {
+            console.log(value);
+         let p2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+               resolve(value*2)
+            }, 2000);
+         })
+         return p2
+        }).then((value)=>{ 
+            console.log(value)
+            let p3 = new Promise((resolve, reject) => {
+                resolve(value*8)
+            })
+            return p3
+        }).then((value)=>{
+            console.log(value);
+        })
+
+
+        const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(10);  
+  }, 1000);
+});
+
+    </script>
+</body>
+
+</html>

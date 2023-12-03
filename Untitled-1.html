@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Quiz App</title>
+  <style>
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #question-container {
+      margin-bottom: 1rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #leaderboard {
+      text-align: center;
+    }
+
+    #scores-list {
+      padding: 0;
+      text-align: left;
+    }
+
+    #scores-list li {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #scores-list li:nth-child(odd) {
+      background-color: #e9e9e9;
+    }
+
+    #confetti {
+      display: none;
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #ffce00;
+      opacity: 0.9;
+      border-radius: 50%;
+      transform-origin: center center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Interactive Quiz App</h1>
+  </header>
+
+  <main>
+     <!-- Display Quiz Categories -->
+    <section id="quiz-categories">
+        <h2>Choose a Quiz Category:</h2>
+        <ul id="category-list">
+          <li onclick="startQuiz('Science')">Science</li>
+          <li onclick="startQuiz('History')">History</li>
+          <li onclick="startQuiz('Technology')">Technology</li>
+        </ul>
+      </section>
+  
+      <!-- Display Quiz Questions -->
+      <section id="quiz-questions" class="hidden">
+        <h2>Quiz Questions</h2>
+        <div id="question-container"></div>
+        <button id="submit-btn" onclick="submitQuiz()">Submit</button>
+      </section>
+  
+      <!-- Display Leaderboard -->
+      <section id="leaderboard" class="hidden">
+        <h2>Leaderboard</h2>
+        <ol id="scores-list"></ol>
+      </section>
+  </main>
+
+  <div id="confetti"></div>
+
+  <script>
+    const quizzes = {
+      Science: [
+        {
+          question: "What is the largest planet in our solar system?",
+          options: ["Mars", "Saturn", "Jupiter", "Venus"],
+          answer: 2
+        },
+        {
+          question: "What is the chemical symbol for water?",
+          options: ["O", "H2O", "CO2", "N2"],
+          answer: 1
+        }
+      ],
+      History: [
+        {
+          question: "Who was the first President of the United States?",
+          options: ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "Benjamin Franklin"],
+          answer: 1
+        },
+        {
+          question: "In which year did World War II end?",
+          options: ["1941", "1945", "1939", "1942"],
+          answer: 1
+        }
+      ],
+      Technology: [
+        {
+          question: "Who co-founded Apple Inc.?",
+          options: ["Bill Gates", "Elon Musk", "Steve Jobs", "Mark Zuckerberg"],
+          answer: 2
+        },
+        {
+          question: "What does HTTP stand for?",
+          options: ["HyperText Transfer Protocol", "Hypertext Text Transfer Protocol", "Hyper Transfer Text Protocol", "High Transfer Text Protocol"],
+          answer: 0
+        }
+      ]
+    };
+
+    let selectedCategory = "";
+    let currentQuestion = 0;
+    let score = 0;
+
+    const categoryList = document.getElementById("category-list");
+    const questionContainer = document.getElementById("question-container");
+    const submitButton = document.getElementById("submit-btn");
+    const quizCategoriesSection = document.getElementById("quiz-categories");
+    const quizQuestionsSection = document.getElementById("quiz-questions");
+    const leaderboardSection = document.getElementById("leaderboard");
+    const scoresList = document.getElementById("scores-list");
+
+    function startQuiz(category) {
+      selectedCategory = category;
+      currentQuestion = 0;
+      score = 0;
+
+      quizCategoriesSection.classList.add("hidden");
+      quizQuestionsSection.classList.remove("hidden");
+      leaderboardSection.classList.add("hidden");
+      displayQuizQuestions();
+    }
+
+    function displayQuizQuestions() {
+      const questions = quizzes[selectedCategory];
+      const question = questions[currentQuestion];
+
+      questionContainer.innerHTML = `
+        <p><strong>Question ${currentQuestion + 1}:</strong> ${question.question}</p>
+        <ul>
+          ${question.options.map((option, index) => `<li><input type="radio" name="answer" value="${index}">${option}</li>`).join("")}
+        </ul>
+      `;
+
+      submitButton.disabled = false;
+    }
+
+    function submitQuiz() {
+      const selectedOption = document.querySelector("input[name='answer']:checked");
+      if (!selectedOption) return;
+
+      const questions = quizzes[selectedCategory];
+      const question = questions[currentQuestion];
+      const userAnswer = parseInt(selectedOption.value, 10);
+
+      if (userAnswer === question.answer) {
+        score++;
+      }
+
+      currentQuestion++;
+
+      if (currentQuestion < questions.length) {
+        displayQuizQuestions();
+      } else {
+        showLeaderboard();
+      }
+    }
+
+    function showLeaderboard() {
+      quizQuestionsSection.classList.add("hidden");
+      leaderboardSection.classList.remove("hidden");
+
+      scoresList.innerHTML = `
+        <li>${selectedCategory} - Score: ${score}/${quizzes[selectedCategory].length}</li>
+      `;
+    
+
+  function showLeaderboard() {
+    quizQuestionsSection.classList.add("hidden");
+    leaderboardSection.classList.remove("hidden");
+
+    scoresList.innerHTML = `
+      <li>${selectedCategory} - Score: ${score}/${quizzes[selectedCategory].length}</li>
+    `;
+
+    if (score === quizzes[selectedCategory].length) {
+      scoresList.innerHTML += `<li>Congratulations! You got a perfect score!</li>`;
+    }
+  }
+ 
+
+    }
+
+    function showLeaderboard() {
+      quizQuestionsSection.classList.add("hidden");
+      leaderboardSection.classList.remove("hidden");
+
+      scoresList.innerHTML = `
+        <li>${selectedCategory} - Score: ${score}/${quizzes[selectedCategory].length}</li>
+      `;
+
+      if (score === quizzes[selectedCategory].length) {
+        scoresList.innerHTML += `<li>Congratulations! You got a perfect score!</li>`;
+        celebrate();
+      }
+    }
+
+    function celebrate() {
+      const confettiContainer = document.getElementById("confetti");
+      confettiContainer.style.display = "block";
+
+      for (let i = 0; i < 100; i++) {
+        const confettiPiece = document.createElement("div");
+        confettiPiece.classList.add("confetti-piece");
+        confettiPiece.style.left = `${Math.random() * 100}vw`;
+        confettiPiece.style.top = `${Math.random() * 100}vh`;
+        confettiContainer.appendChild(confettiPiece);
+
+        animateConfetti(confettiPiece);
+      }
+
+      setTimeout(() => {
+        confettiContainer.innerHTML = "";
+        confettiContainer.style.display = "none";
+      }, 3000);
+    }
+
+    function animateConfetti(confettiPiece) {
+      const angle = Math.random() * 360;
+      const distance = 100 + Math.random() * 50;
+      const x = distance * Math.cos(angle);
+      const y = distance * Math.sin(angle);
+
+      confettiPiece.style.transition = "transform 3s ease-out";
+      confettiPiece.style.transform = `translate(${x}px, ${y}px) rotate(${Math.random() * 360}deg)`;
+
+      setTimeout(() => {
+        confettiPiece.remove();
+      }, 3000);
+    }
+  </script>
+</body>
+
+</html>

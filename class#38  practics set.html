@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prasctice set</title>
+<style media="screen">
+  *{
+    margin: 0 auto;
+   padding: 0;
+  }
+  nav{
+    display: flex;
+    background-color:cyan;
+  }
+  nav li{
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 50px;
+    padding: 10px;
+    list-style: none;
+  }
+
+</style>
+
+</head>
+
+
+<body>
+  <nav>
+    <li>Home</li>
+    <li>Content Us</li>
+    <li>About Us</li>
+    <li>Work with Us</li>
+</nav>
+    <script>
+ document.getElementsByTagName("nav")[0].firstElementChild.style.color="red"
+ document.getElementsByTagName("nav")[0].firstElementChild.style.color="green"
+ document.getElementsByTagName("nav")[0].lastElementChild.style.color="green"
+ Array.from(document.getElementsByTagName("li")).forEach(element=> {
+    element.style.background= "cyan";
+ });
+    </script>
+</body>
+
+</html>
